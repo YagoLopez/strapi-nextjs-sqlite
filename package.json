@@ -9,9 +9,12 @@
     "build": "strapi build",
     "strapi": "strapi",
     "heroku-prebuild": "node scripts/postgres-env.js",
-    "heroku-postbuild": "strapi build && node scripts/postinstall.js"
+    "heroku-postbuild": "strapi build && node scripts/postinstall.js",
+    "serve": "lite-server --baseDir=build"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
